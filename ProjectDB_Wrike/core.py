@@ -6,7 +6,7 @@ import requests
 import time
 import logging
 from time import localtime, strftime
-from ProjectDB_Wrike import credentials
+import credentials
 
 
 
