@@ -4,8 +4,8 @@ Created on Dec 1, 2018
 @author: tlrausch33
 '''
 import credentials
-from core import wrike_loadfolders, wrike_clearDatabase, wrike_loadtasks, wrike_loadcomments, wrike_gettasks
-import time, datetime
+from core import wrike_loadfolders, wrike_clearDatabase, wrike_loadcomments, wrike_gettasks
+import time
 import psycopg2
 
 
@@ -18,7 +18,7 @@ except:
     print "Unable to connect to db"
     print credentials.AWSDbCredentials['hostname'] + credentials.AWSDbCredentials['username']+ credentials.AWSDbCredentials['password'] + credentials.AWSDbCredentials['database']
 
-
+print "test"
 
 wrike_clearDatabase(dbconnection)
 print time.strftime("%m/%d/%Y %H:%M:%S")+ ' Wrike Database Cleared'

@@ -6,7 +6,6 @@ import requests
 import time
 import logging
 from time import localtime, strftime
-import credentials
 
 
 
@@ -152,11 +151,15 @@ def wrike_loadtasks(dbconnection, response):
         strPlannedStart = None
         strPlannedDue = None
         strPlannedDuration = None
+        strObjectType = None
+        strTaskNotes = None
+        strIssue = None
+        boolProjLevel = False
         
         #Get Custom Field Information
         if 'customFields' in task:
             listCustomFields = task['customFields']
-            strObjectType = None
+            strObjectType = ""
             strTaskNotes = None
             strIssue = None
             boolProjLevel = False
